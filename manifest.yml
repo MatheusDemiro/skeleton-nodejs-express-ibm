@@ -1,0 +1,14 @@
+applications:
+  - instances: 3
+    timeout: 300
+    name: <application-name>
+    buildpack: sdk-for-nodejs
+    disk_quota: 500M
+    memory: 128M
+    env:
+      MONGO_DB_URI: <database-url>
+      DATABASE_NAME: <database-name>
+      ACCESS_TOKEN_SECRET_KEY: <your-access-secret-key>
+      REFRESH_TOKEN_SECRET_KEY: <your-refresh-secret-key>
+      ACCESS_TOKEN_VALIDITY_HOURS: 6h
+      REFRESH_TOKEN_VALIDITY_HOURS: 8760h
